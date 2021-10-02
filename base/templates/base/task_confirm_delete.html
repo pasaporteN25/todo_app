@@ -1,0 +1,6 @@
+<a href="{% url 'tasks' %}">Atras</a>
+<form method="POST">
+    {% csrf_token %}
+    <p>Esta seguro que desea borrar esto? "{{task}}"</p>
+    <input type="submit" value="Borrar"/>
+</form>

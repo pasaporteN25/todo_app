@@ -1,0 +1,29 @@
+
+{% if request.user.is_authenticated %}
+    <p>{{request.user}}</p>
+    <a href="{% url 'logout' %}">Cerrar sesion</a>
+{% else %}
+    <a href="{% url 'login' %}">Login</a>
+{% endif %}
+
+<hr>
+<h1>Mi app</h1>
+<a href="{% url 'task-create' %}">Agregar</a>
+
+<table>
+    <tr>
+        <th>Item</th>
+        <th></th>
+        <th></th>
+    </tr>
+    {% for task in object_list %}
+    <tr>
+        <td>{{task.titulo}}</td>
+        <td><a href="{% url 'task' task.id %}">view</a></td>
+        <td><a href="{% url 'task-update' task.id %}">Editar</a></td>
+        <td><a href="{% url 'task-delete' task.id %}">Borrar</a></td>
+    </tr>
+    {% empty %}
+    <h3>No hay items</h3>
+    {% endfor %}
+</table>
