@@ -10,7 +10,8 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@1,300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@1,300&display=swap"
+          rel="stylesheet">
 
     <style>
         body {
@@ -35,7 +36,7 @@
             border-radius: 5px 5px 0 0;
             background: linear-gradient(90deg, #EBFFEB 0%, #EBFFEB 43%, #EBFFEB 100%);
         }
-             .task-wrapper {
+        .task-wrapper {
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -96,14 +97,25 @@
         .handle:active:after {
             cursor: grabbing;
         }
+        .button {
+            border: 1px solid #757575;
+            background-color: #FFF;
+            color: #EB796F;
+            padding: 10px;
+            font-size: 14px;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
 
 
     </style>
 </head>
 <body>
-    <div class="container">
-        {% block content %} {% endblock content %}
-    </div>
+<div class="container">
+    {% block content %} {% endblock content %}
+</div>
 
 </body>
 </html>
