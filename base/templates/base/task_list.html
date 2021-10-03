@@ -1,3 +1,7 @@
+{% extends 'base/main.html' %}
+{% block content %}
+
+
 
 {% if request.user.is_authenticated %}
     <p>{{request.user}}</p>
@@ -27,3 +31,5 @@
     <h3>No hay items</h3>
     {% endfor %}
 </table>
+
+{% endblock content %}
